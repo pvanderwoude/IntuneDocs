@@ -128,7 +128,10 @@ The following table describes how noncompliant settings are managed when a compl
 - **Company portal app runtime integrity**: Checks if the Company Portal app has the default runtime environment installed, is properly signed, is not in debug-mode, and is installed from a known source.
 - **Block USB debugging on device** (Android 4.2 or later): Choose to prevent devices from using the USB debugging feature.
 - **Minimum security patch level** (Android 6.0 or later): Select the oldest security patch level a device can have. Devices that are not at least at this patch level are noncompliant. The date must be entered in the `YYYY-MM-DD` format.
-
+- **Restricted apps**: You can restrict apps by adding their bundle IDs to the policy. Then if a device has the app installed, the device will be marked as noncompliant. 
+   - **App name**: Enter a user-friendly name to help you identify the bundle ID. 
+   - **App Bundle ID**: Enter the unique bundle identifier for the app provider. For Android, the app bundle ID is taken from the store URL for the app. For example, if the URL to the app in the store is *https://play.google.com/store/apps/details?id=com.Slack*, the App Bundle ID = *com.Slack*.
+   
 ## Locations
 
 In your policy, choose from existing locations. Don't have a location yet? [Use Locations (network fence) in Intune](use-network-locations.md) provides some guidance.
